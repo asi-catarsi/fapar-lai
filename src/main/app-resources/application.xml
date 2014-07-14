@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application id="OPT_subsystem">
+        <jobTemplates>
+                <jobTemplate id="classifier">
+			<streamingExecutable></streamingExecutable>
+			<defaultParameters>
+                                <parameter></parameter>
+			</defaultParameters>
+			<defaultJobconf></defaultJobconf>
+		</jobTemplate>
+	</jobTemplates>
+	<workflow id="wf_opt_subsystem" title="OPT_subsystem" abstract="This is the first workflow of the project CATARSI:OPT subsystem.">
+                <workflowVersion>1.0</workflowVersion>
+                <node id="node_classifier">
+                        <job id="classifier"/>
+			<sources>
+                                <source refid="cas:series">
+			</sources>
+		</node>
+        </workflow>
+</application>	
