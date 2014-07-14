@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<application id="OPT_subsystem">
+<application id="CATARSI_lai">
         <jobTemplates>
-                <jobTemplate id="classifier">
-			<streamingExecutable></streamingExecutable>
+                <jobTemplate id="lai">
+			<streamingExecutable>/application/lai/run.sh</streamingExecutable>
 			<defaultParameters>
-                                <parameter></parameter>
+                                <parameter id="starttime" title="Start Time" abstract="Start Time to query the Catalogue" scope="runtime" type="opensearch" target="time:start"/>
+                                <parameter id="enddate" title="End time" abstract="End time to query the Catalogue" scope="runtime" type="opensearch" target="time:end"/>
+                                <parameter id="bbox" title="Bounding Box" abstract="Bounding Box to query the Catalogue" scope="runtime" type="opensearch" target="geo:box"/>
 			</defaultParameters>
 			<defaultJobconf></defaultJobconf>
 		</jobTemplate>
 	</jobTemplates>
-	<workflow id="wf_opt_subsystem" title="OPT_subsystem" abstract="This is the first workflow of the project CATARSI:OPT subsystem.">
+	<workflow id="wf_lai" title="Landsat Leaf Area Index" abstract="Landsat Leaf Area Index">
                 <workflowVersion>1.0</workflowVersion>
-                <node id="node_classifier">
-                        <job id="classifier"/>
+                <node id="node_lai">
+                        <job id="lai"/>
 			<sources>
-                                <source refid="cas:series">
+                                <source refid="cas:series">http://catalogo.progetto-catarsi.it/catalogue/search/LANDSAT5/description</source>
 			</sources>
+			<parameters/>
 		</node>
         </workflow>
 </application>	
