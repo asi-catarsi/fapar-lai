@@ -9,6 +9,7 @@
 	<description>catarsi-lai</description>
 	<version>0.1-SNAPSHOT</version>
 
+
 	<scm>
 		<connection>scm:git:git@github.com:asi-catarsi/lai.git</connection>
 		<developerConnection>scm:git:git@github.com:asi-catarsi/lai.git</developerConnection>
