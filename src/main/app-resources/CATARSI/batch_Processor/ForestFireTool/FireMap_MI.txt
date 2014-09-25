@@ -1,0 +1,55 @@
+;
+;	Copyright 1995-2013, Advanced Computer Systems , Inc.
+;	Via Della Bufalotta, 378 - 00139 Roma - Italy
+;	http://www.acsys.it
+;
+;	All Rights Reserved.
+;
+;	This is UNPUBLISHED PROPRIETARY SOURCE CODE of Advanced Computer Systems;
+;	the contents of this file may not be disclosed to third parties, copied or
+;	duplicated in any form, in whole or in part, without the prior written
+;	permission of Advanced Computer Systems, Inc.
+;
+;	$Prod:  $
+;
+;	$Id: qualityTool_wrapper.pro,v 1.1.1.1 2011/06/22 14:00:12 paocas Exp $
+;
+;	$Author: paocas $
+;
+	
+
+;+
+; MODULE: NBR calculation Launcher
+;
+; PURPOSE:	
+;
+; CATEGORY:
+; 
+;
+; FUNCTIONS:
+;
+
+;
+; PROCEDURES:
+;
+; AUTHOR:
+;	Paolo Castracane 8 Oct 2013 1.0
+;
+
+;
+
+ENVI, /RESTORE_BASE_SAVE_FILES 
+ENVI_BATCH_INIT
+
+
+restore,'$CATA_SAV/ACS_CATA_ForestFireTool.sav
+.compile $CATA_IDL_CODE/IdlCATA_FireTool/DW_7Forest_fire_detection/fireforestdetection.pro
+
+FireForestDetection,$
+;input paramerters
+        single_frame=0,$
+        SET_Training_map=0
+
+
+; Exit ENVI 
+; ENVI_BATCH_EXIT 

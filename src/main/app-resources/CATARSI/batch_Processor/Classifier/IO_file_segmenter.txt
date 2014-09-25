@@ -1,0 +1,40 @@
+###################################################
+#
+#
+#   Copyright 2002-2006, Advanced Computer Systems , Inc.
+#   Via Della Bufalotta, 378 - 00139 Roma - Italy
+#   http://www.acsys.it
+#
+#   All Rights Reserved.
+#
+#   This is UNPUBLISHED PROPRIETARY CONFICURATION FILE of Advanced Computer Systems.
+#   the contents of this file may not be disclosed to third parties, copied or
+#   duplicated in any form, in whole or in part, without the prior written
+#   permission of Advanced Computer Systems, Inc.
+#
+#
+#
+#
+#   $Name:  $
+#
+# 
+#
+#   RESTRICTIONS:
+#
+#
+#
+#
+###################################################
+
+
+#Segmenter Parameters
+
+WorkDirectory: /application/CATARSI/WorkDir/
+ConfFname: /application/CATARSI/batch_Processor/Classifier/conf/ACSFeaturesExtraction.def
+Inputfile1: /application/CATARSI/WorkDir/LAN_ITA_1994_189_34_sel
+Outputfile1: /application/CATARSI/WorkDir/SEG_ITA_1994_189_34_sel
+seg_command: /application/CATARSI/batch_Processor/Classifier/bin/segmenter
+top_command: /application/CATARSI/batch_Processor/Classifier/bin/topology
+
+
+

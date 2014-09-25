@@ -1,25 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<application id="CATARSI_lai">
-        <jobTemplates>
-                <jobTemplate id="lai">
-			<streamingExecutable>/application/lai/run.sh</streamingExecutable>
-			<defaultParameters>
-                                <parameter id="starttime" title="Start Time" abstract="Start Time to query the Catalogue" scope="runtime" type="opensearch" target="time:start"/>
-                                <parameter id="enddate" title="End time" abstract="End time to query the Catalogue" scope="runtime" type="opensearch" target="time:end"/>
-                                <parameter id="bbox" title="Bounding Box" abstract="Bounding Box to query the Catalogue" scope="runtime" type="opensearch" target="geo:box"/>
-                                <parameter id="geometry" title="Geometry" abstract="Geometry" scope="runtime" />
-			</defaultParameters>
-			<defaultJobconf></defaultJobconf>
-		</jobTemplate>
-	</jobTemplates>
-	<workflow id="wf_lai" title="Landsat Leaf Area Index" abstract="Landsat Leaf Area Index">
-                <workflowVersion>1.0</workflowVersion>
-                <node id="node_lai">
-                        <job id="lai"/>
-			<sources>
-                                <source refid="cas:series">http://catalogo.progetto-catarsi.it/catalogue/search/LANDSAT5/description</source>
-			</sources>
-			<parameters/>
-		</node>
-        </workflow>
-</application>	
+<?xml version="1.0" encoding="us-ascii"?>
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="CATARSI_lai">
+  <jobTemplates>
+    <jobTemplate id="lai">
+      <streamingExecutable>/application/lai/run.sh</streamingExecutable>
+      <defaultParameters>
+        <parameter id="starttime" title="Start Time" abstract="Start Time to query the Catalogue" scope="runtime" type="opensearch" target="time:start" />
+        <parameter id="enddate" title="End time" abstract="End time to query the Catalogue" scope="runtime" type="opensearch" target="time:end" />
+        <parameter id="bbox" title="Bounding Box" abstract="Bounding Box to query the Catalogue" scope="runtime" type="opensearch" target="geo:box" />
+      </defaultParameters>
+      <defaultJobconf />
+    </jobTemplate>
+  </jobTemplates>
+  <workflow id="wf_lai" title="Leaf Area Index" abstract="LAI">
+    <workflowVersion>1.0</workflowVersion>
+    <node id="node_lai">
+      <job id="lai" />
+      <sources>
+        <source id="data" refid="cas:series">http://catalogo.progetto-catarsi.it/catalogue/search/LAI_LANDSAT_INPUT/description</source>
+      </sources>
+      <parameters>
+      	<parameter id="starttime">2000-06-20T09:50:58.000Z</parameter>
+      	<parameter id="enddate">2000-06-20T09:50:58.000Z</parameter>
+      	<parameter id="bbox">-180,90,180,-90</parameter>
+      </parameters>
+    </node>
+  </workflow>
+</application>
