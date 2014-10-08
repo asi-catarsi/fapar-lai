@@ -145,7 +145,7 @@
 					<provides>
 						<provide>${project.artifactId}</provide>
 					</provides>
-					<needarch>noarch</needarch>
+					<needarch>x86_64</needarch>
 				</configuration>
 			</plugin>
 
@@ -196,7 +196,7 @@
 						<configuration>
 							<releaseName>v${project.version}</releaseName>
 							<tag>v${project.version}</tag>
-	<artifact>${project.build.directory}/rpm/${project.artifactId}/RPMS/noarch/${project.artifactId}-${parsedVersion.majorVersion}.${parsedVersion.minorVersion}-ciop.noarch.rpm</artifact>							
+	<artifact>${project.build.directory}/rpm/${project.artifactId}/RPMS/x86_64/${project.artifactId}-${parsedVersion.majorVersion}.${parsedVersion.minorVersion}-ciop.x86_64.rpm</artifact>							
 <overwriteArtifact>true</overwriteArtifact>
 						</configuration>
 					</execution>
