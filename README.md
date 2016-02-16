@@ -1,5 +1,7 @@
 ### Getting Started 
 
+[![Join the chat at https://gitter.im/asi-catarsi/lai](https://badges.gitter.im/asi-catarsi/lai.svg)](https://gitter.im/asi-catarsi/lai?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 To run this application, you will need a Developer Cloud Sandbox that can be requested from [Terradue's Portal](http://www.terradue.com/partners), provided user registration approval. 
 
 ### Installation 
